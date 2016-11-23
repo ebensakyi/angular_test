@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {FirstserviceService} from './firstservice.service'
+
 import { routes } from './app.router'
 
 import { AppComponent } from './app.component';
 import { ArtisteComponent } from './artiste/artiste.component';
 import { GenreComponent } from './genre/genre.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 
 
@@ -15,7 +18,8 @@ import { GenreComponent } from './genre/genre.component';
   declarations: [
     AppComponent,
     ArtisteComponent,
-    GenreComponent
+    GenreComponent,
+    HeroesComponent
 
   ],
   imports: [
@@ -24,7 +28,7 @@ import { GenreComponent } from './genre/genre.component';
     HttpModule,
     routes
   ],
-  providers: [],
+  providers: [FirstserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
